@@ -10,6 +10,8 @@ const Order = lazy(() => import('./pages/order'))
 const OrderDetail = lazy(() => import('./pages/order/detail'))
 const My = lazy(() => import('./pages/my'))
 const AuthInfo = lazy(() => import('./pages/my/authInfo'))
+const Goods = lazy(() => import('./pages/my/goods'))
+const GoodsCollect = lazy(() => import('./pages/my/goods/collect'))
 
 const AppRouter = () => {
 
@@ -25,6 +27,8 @@ const AppRouter = () => {
             <Route exact path="/order/detail" component={OrderDetail} />
             <Route exact path="/my" component={My} />
             <Route exact path="/my/authInfo" component={AuthInfo} />
+            <Route exact path="/my/goods" component={Goods} />
+            <Route exact path="/my/goods/collect" component={GoodsCollect} />
             <Redirect exact path="*" to="/index" />
           </Suspense>
         </Switch>

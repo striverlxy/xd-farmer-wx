@@ -31,7 +31,7 @@ const My = () => {
             </div>
             <List>
                 <Item arrow="horizontal" onClick={() => history.push('/my/authInfo')}>我的资料</Item>
-                <Item arrow="horizontal" onClick={() => {}}>我的供货</Item>
+                <Item arrow="horizontal" onClick={() => history.push('/my/goods')}>我的供货</Item>
             </List>
         </div>
     )
