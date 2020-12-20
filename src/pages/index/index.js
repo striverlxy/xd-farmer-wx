@@ -3,7 +3,7 @@ import { TabBar } from "antd-mobile";
 import Home from '../home'
 import Collect from '../collect'
 import Order from "../order";
-import XdService from "../xdService";
+import My from "../my";
 
 const Index = () => {
 
@@ -65,6 +65,16 @@ const Index = () => {
                     >
                     </TabBar.Item>
                     <TabBar.Item
+                        icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
+                        selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+                        title="分帐单"
+                        key="order"
+                        // dot
+                        selected={current == 3}
+                        onPress={() => setCurrect(3)}
+                    >
+                    </TabBar.Item>
+                    <TabBar.Item
                         icon={
                             <div style={{
                                 width: '22px',
@@ -79,18 +89,8 @@ const Index = () => {
                                 background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
                             />
                         }
-                        title="分帐单"
-                        key="order"
-                        // dot
-                        selected={current == 3}
-                        onPress={() => setCurrect(3)}
-                    >
-                    </TabBar.Item>
-                    <TabBar.Item
-                        icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-                        selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
-                        title="鲜道服务"
-                        key="service"
+                        title="我的"
+                        key="my"
                         selected={current == 4}
                         onPress={() => setCurrect(4)}
                     >
@@ -106,7 +106,7 @@ const Index = () => {
                 { current == 1 && <Home /> }
                 { current == 2 && <Collect /> }
                 { current == 3 && <Order /> }
-                { current == 4 && <XdService /> }
+                { current == 4 && <My /> }
             </div>
         )
     }
